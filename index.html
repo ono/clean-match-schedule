@@ -17,6 +17,7 @@
       --green-dark: #586b5e;
       --sand: #c9d5ce;
       --japan-blue: #003f8f;
+      --england-red: #c8102e;
       --ash-blue: #8da8c4;
     }
 
@@ -200,6 +201,7 @@
     }
 
     tr.england td {
+      color: var(--england-red);
       font-weight: 700;
     }
 
@@ -352,6 +354,10 @@
         color: var(--japan-blue);
       }
 
+      tr.england td {
+        color: var(--england-red);
+      }
+
       tr.japan td.match[data-group]::after {
         border-color: rgba(0, 63, 143, 0.35);
         color: var(--japan-blue);
@@ -359,6 +365,7 @@
       }
 
       tr.england td.match[data-group]::after {
+        color: var(--england-red);
         font-weight: 700;
       }
 
