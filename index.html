@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WC 26 Schedule</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <style>
     :root {
       --paper: #e5ebe8;
@@ -219,25 +220,111 @@
 
     @media (max-width: 760px) {
       .page {
-        padding: 40px 18px 64px;
+        padding: 34px 14px 56px;
       }
 
       header {
-        margin-bottom: 36px;
+        margin-bottom: 28px;
+        padding-bottom: 24px;
+      }
+
+      h1 {
+        font-size: 38px;
       }
 
       .table-wrap {
-        overflow-x: auto;
+        overflow: hidden;
+      }
+
+      table,
+      tbody,
+      tr,
+      td {
+        display: block;
       }
 
       table {
-        min-width: 760px;
+        width: 100%;
       }
 
-      tbody td,
-      thead th {
-        padding-left: 14px;
-        padding-right: 14px;
+      thead {
+        display: none;
+      }
+
+      tbody tr {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 5px 16px;
+        padding: 14px 15px;
+        border-bottom: 1px solid var(--soft-line);
+      }
+
+      tbody tr:last-child {
+        border-bottom: none;
+      }
+
+      tbody tr.is-near {
+        border: 1px solid #a0b0a7;
+        border-left-width: 3px;
+      }
+
+      tbody tr.is-near + tr {
+        border-top: none;
+      }
+
+      tbody tr.is-near td {
+        border: none;
+      }
+
+      tbody td {
+        padding: 0;
+        border-bottom: none;
+        font-size: 13px;
+        line-height: 1.35;
+      }
+
+      td.date,
+      td.ko {
+        width: auto;
+        text-align: left;
+      }
+
+      td.date {
+        grid-column: 1;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      td.ko {
+        grid-column: 2;
+        justify-self: end;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      td.match {
+        grid-column: 1 / -1;
+        width: auto;
+        font-size: 16px;
+        line-height: 1.25;
+      }
+
+      td.match + td {
+        grid-column: 1;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      td.tv {
+        grid-column: 2;
+        justify-self: end;
+        width: auto;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+      }
+
+      footer {
+        text-align: left;
       }
     }
 
