@@ -1,0 +1,1084 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FIFA World Cup 2026 — UK Schedule</title>
+  <style>
+    :root {
+      --paper: #e5ebe8;
+      --surface: #fbfdfb;
+      --ink: #262a25;
+      --muted: #77766b;
+      --hairline: #cdd8d1;
+      --soft-line: #dfe6e1;
+      --green: #748777;
+      --green-dark: #586b5e;
+      --sand: #c9d5ce;
+      --japan-blue: #003f8f;
+      --ash-blue: #8da8c4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family:
+        "Avenir Next",
+        Avenir,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      letter-spacing: 0.01em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 72px 44px 96px;
+    }
+
+    header {
+      display: block;
+      margin-bottom: 48px;
+      border-bottom: 1px solid var(--hairline);
+      padding-bottom: 32px;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--green-dark);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 720px;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      font-weight: 500;
+    }
+
+    .sub {
+      max-width: 280px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .legend {
+      display: inline-flex;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .legend span {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .swatch {
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+      display: inline-block;
+    }
+
+    .japan-key {
+      color: var(--japan-blue);
+      font-weight: 700;
+    }
+
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(52, 49, 40, 0.06);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead th {
+      padding: 17px 20px 15px;
+      text-align: left;
+      background: var(--surface);
+      color: var(--green-dark);
+      border-bottom: 1px solid var(--hairline);
+      font-size: 11px;
+      line-height: 1;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    tbody td {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--soft-line);
+      vertical-align: middle;
+      font-size: 14px;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(215, 196, 168, 0.10);
+    }
+
+    tbody tr:hover {
+      background: rgba(116, 135, 119, 0.09);
+    }
+
+    th.date,
+    th.ko,
+    td.date,
+    td.ko {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    td.date {
+      color: var(--muted);
+      width: 190px;
+    }
+
+    td.ko {
+      width: 92px;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+
+    td.match {
+      width: 46%;
+      font-size: 15px;
+    }
+
+    td.tv {
+      width: 84px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
+    tr.japan td {
+      color: var(--japan-blue);
+      font-weight: 700;
+    }
+
+    tr.japan td.match {
+      color: var(--japan-blue);
+      text-shadow: 0 0 0 var(--ash-blue);
+    }
+
+    tr.england td {
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: right;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 40px 18px 64px;
+      }
+
+      header {
+        margin-bottom: 36px;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+      }
+
+      table {
+        min-width: 760px;
+      }
+
+      tbody td,
+      thead th {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 10mm;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        background: white;
+        color: var(--ink);
+        font-size: 10.5px;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      header {
+        margin-bottom: 22px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--hairline);
+      }
+
+      .eyebrow {
+        margin-bottom: 9px;
+        font-size: 9px;
+        letter-spacing: 0.16em;
+      }
+
+      h1 {
+        font-size: 34px;
+        line-height: 0.98;
+        letter-spacing: -0.045em;
+        font-weight: 500;
+      }
+
+      .table-wrap {
+        background: var(--surface);
+        border: 1px solid var(--hairline);
+        border-radius: 2px;
+        box-shadow: 0 10px 28px rgba(52, 49, 40, 0.05);
+        overflow: hidden;
+      }
+
+      thead {
+        display: table-header-group;
+      }
+
+      thead th {
+        background: var(--surface);
+        color: var(--green-dark);
+        border-bottom: 1px solid var(--hairline);
+        font-size: 7.6px;
+        letter-spacing: 0.13em;
+        padding: 7px 8px 6px;
+      }
+
+      tbody tr:nth-child(even) {
+        background: rgba(201, 213, 206, 0.20);
+      }
+
+      tbody td {
+        padding: 4.5px 8px;
+        border-bottom: 1px solid var(--soft-line);
+        font-size: 8.1px;
+        line-height: 1.2;
+      }
+
+      td.match {
+        font-size: 8.4px;
+      }
+
+      tr.japan td {
+        color: var(--japan-blue);
+        font-weight: 700;
+      }
+
+      tr.england td {
+        font-weight: 700;
+      }
+
+      footer {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 8px;
+        text-align: right;
+      }
+
+      tr {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <p class="eyebrow">World Cup 2026</p>
+        <h1>match schedule</h1>
+      </div>
+    </header>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="date">Date</th>
+            <th class="ko">KO</th>
+            <th>Match</th>
+            <th>City</th>
+            <th>TV</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="date">Thursday, 11 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">Mexico vs South Africa</td>
+            <td>Mexico City</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 12 June</td>
+            <td class="ko">3 AM</td>
+            <td class="match">South Korea vs Czech Rep.</td>
+            <td>Zapopan</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 12 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">Canada vs Bosnia &amp; Hez.</td>
+            <td>Toronto</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 13 June</td>
+            <td class="ko">2 AM</td>
+            <td class="match">USA vs Paraguay</td>
+            <td>Los Angeles</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 13 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">Qatar vs Switzerland</td>
+            <td>Santa Clara</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 13 June</td>
+            <td class="ko">11 PM</td>
+            <td class="match">Brazil vs Morocco</td>
+            <td>New Jersey</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 14 June</td>
+            <td class="ko">2 AM</td>
+            <td class="match">Haiti vs Scotland</td>
+            <td>Foxborough</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 14 June</td>
+            <td class="ko">5 AM</td>
+            <td class="match">Australia vs Turkey</td>
+            <td>Vancouver</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 14 June</td>
+            <td class="ko">6 PM</td>
+            <td class="match">Germany vs Curacao</td>
+            <td>Houston</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr class="japan">
+            <td class="date">Sunday, 14 June</td>
+            <td class="ko">9 PM</td>
+            <td class="match">Netherlands vs Japan</td>
+            <td>Arlington</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Monday, 15 June</td>
+            <td class="ko">12 AM</td>
+            <td class="match">Ivory Coast vs Ecuador</td>
+            <td>Philadelphia</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Monday, 15 June</td>
+            <td class="ko">3 AM</td>
+            <td class="match">Sweden vs Tunisia</td>
+            <td>Guadalupe</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Monday, 15 June</td>
+            <td class="ko">5 PM</td>
+            <td class="match">Spain vs Cape Verde</td>
+            <td>Atlanta</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Monday, 15 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">Belgium vs Egypt</td>
+            <td>Seattle</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Monday, 15 June</td>
+            <td class="ko">11 PM</td>
+            <td class="match">Saudi Arabia vs Uruguay</td>
+            <td>Miami</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 16 June</td>
+            <td class="ko">2 AM</td>
+            <td class="match">Iran vs New Zealand</td>
+            <td>Los Angeles</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 16 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">France vs Senegal</td>
+            <td>New Jersey</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 16 June</td>
+            <td class="ko">11 PM</td>
+            <td class="match">Iraq vs Norway</td>
+            <td>Foxborough</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 17 June</td>
+            <td class="ko">2 AM</td>
+            <td class="match">Argentina vs Algeria</td>
+            <td>Kansas City</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 17 June</td>
+            <td class="ko">5 AM</td>
+            <td class="match">Austria vs Jordan</td>
+            <td>Santa Clara</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 17 June</td>
+            <td class="ko">6 PM</td>
+            <td class="match">Portugal vs DR Congo</td>
+            <td>Houston</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr class="england">
+            <td class="date">Wednesday, 17 June</td>
+            <td class="ko">9 PM</td>
+            <td class="match">England vs Croatia</td>
+            <td>Arlington</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Thursday, 18 June</td>
+            <td class="ko">12 AM</td>
+            <td class="match">Ghana vs Panama</td>
+            <td>Toronto</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Thursday, 18 June</td>
+            <td class="ko">3 AM</td>
+            <td class="match">Uzbekistan vs Colombia</td>
+            <td>Mexico City</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Thursday, 18 June</td>
+            <td class="ko">5 PM</td>
+            <td class="match">Czech Rep. vs South Africa</td>
+            <td>Atlanta</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Thursday, 18 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">Switzerland vs Bosnia &amp; Hez.</td>
+            <td>Los Angeles</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Thursday, 18 June</td>
+            <td class="ko">11 PM</td>
+            <td class="match">Canada vs Qatar</td>
+            <td>Vancouver</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 19 June</td>
+            <td class="ko">2 AM</td>
+            <td class="match">Mexico vs South Korea</td>
+            <td>Zapopan</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 19 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">USA vs Australia</td>
+            <td>Seattle</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 19 June</td>
+            <td class="ko">11 PM</td>
+            <td class="match">Scotland vs Morocco</td>
+            <td>Foxborough</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 20 June</td>
+            <td class="ko">2 AM</td>
+            <td class="match">Brazil vs Haiti</td>
+            <td>Philadelphia</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 20 June</td>
+            <td class="ko">4 AM</td>
+            <td class="match">Turkey vs Paraguay</td>
+            <td>Santa Clara</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 20 June</td>
+            <td class="ko">6 PM</td>
+            <td class="match">Netherlands vs Sweden</td>
+            <td>Houston</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 20 June</td>
+            <td class="ko">9 PM</td>
+            <td class="match">Germany vs Ivory Coast</td>
+            <td>Toronto</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 21 June</td>
+            <td class="ko">1 AM</td>
+            <td class="match">Ecuador vs Curacao</td>
+            <td>Kansas City</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr class="japan">
+            <td class="date">Sunday, 21 June</td>
+            <td class="ko">5 AM</td>
+            <td class="match">Tunisia vs Japan</td>
+            <td>Guadalupe</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 21 June</td>
+            <td class="ko">5 PM</td>
+            <td class="match">Spain vs Saudi Arabia</td>
+            <td>Atlanta</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 21 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">Belgium vs Iran</td>
+            <td>Los Angeles</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 21 June</td>
+            <td class="ko">11 PM</td>
+            <td class="match">Uruguay vs Cape Verde</td>
+            <td>Miami</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Monday, 22 June</td>
+            <td class="ko">2 AM</td>
+            <td class="match">New Zealand vs Egypt</td>
+            <td>Vancouver</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Monday, 22 June</td>
+            <td class="ko">6 PM</td>
+            <td class="match">Argentina vs Austria</td>
+            <td>Arlington</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Monday, 22 June</td>
+            <td class="ko">10 PM</td>
+            <td class="match">France vs Iraq</td>
+            <td>Philadelphia</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 23 June</td>
+            <td class="ko">1 AM</td>
+            <td class="match">Norway vs Senegal</td>
+            <td>Toronto</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 23 June</td>
+            <td class="ko">4 AM</td>
+            <td class="match">Jordan vs Algeria</td>
+            <td>Santa Clara</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 23 June</td>
+            <td class="ko">6 PM</td>
+            <td class="match">Portugal vs Uzbekistan</td>
+            <td>Houston</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr class="england">
+            <td class="date">Tuesday, 23 June</td>
+            <td class="ko">9 PM</td>
+            <td class="match">England vs Ghana</td>
+            <td>Foxborough</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 24 June</td>
+            <td class="ko">12 AM</td>
+            <td class="match">Panama vs Croatia</td>
+            <td>Foxborough</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 24 June</td>
+            <td class="ko">3 AM</td>
+            <td class="match">Colombia vs DR Congo</td>
+            <td>Zapopan</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 24 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">Bosnia &amp; Hez. vs Qatar</td>
+            <td>Seattle</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 24 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">Switzerland vs Canada</td>
+            <td>Vancouver</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 24 June</td>
+            <td class="ko">11 PM</td>
+            <td class="match">Morocco vs Haiti</td>
+            <td>Atlanta</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 24 June</td>
+            <td class="ko">11 PM</td>
+            <td class="match">Scotland vs Brazil</td>
+            <td>Miami</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Thursday, 25 June</td>
+            <td class="ko">2 AM</td>
+            <td class="match">Czech Rep. vs Mexico</td>
+            <td>Mexico City</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Thursday, 25 June</td>
+            <td class="ko">2 AM</td>
+            <td class="match">South Africa vs South Korea</td>
+            <td>Guadalupe</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Thursday, 25 June</td>
+            <td class="ko">9 PM</td>
+            <td class="match">Curacao vs Ivory Coast</td>
+            <td>Philadelphia</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Thursday, 25 June</td>
+            <td class="ko">9 PM</td>
+            <td class="match">Ecuador vs Germany</td>
+            <td>New Jersey</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr class="japan">
+            <td class="date">Friday, 26 June</td>
+            <td class="ko">12 AM</td>
+            <td class="match">Japan vs Sweden</td>
+            <td>Arlington</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 26 June</td>
+            <td class="ko">12 AM</td>
+            <td class="match">Tunisia vs Netherlands</td>
+            <td>Kansas City</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 26 June</td>
+            <td class="ko">3 AM</td>
+            <td class="match">Paraguay vs Australia</td>
+            <td>Santa Clara</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 26 June</td>
+            <td class="ko">3 AM</td>
+            <td class="match">Turkey vs USA</td>
+            <td>Los Angeles</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 26 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">Norway vs France</td>
+            <td>Foxborough</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 26 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">Senegal vs Iraq</td>
+            <td>Toronto</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 27 June</td>
+            <td class="ko">1 AM</td>
+            <td class="match">Cape Verde vs Saudi Arabia</td>
+            <td>Houston</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 27 June</td>
+            <td class="ko">1 AM</td>
+            <td class="match">Uruguay vs Spain</td>
+            <td>Zapopan</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 27 June</td>
+            <td class="ko">4 AM</td>
+            <td class="match">Egypt vs Iran</td>
+            <td>Seattle</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 27 June</td>
+            <td class="ko">4 AM</td>
+            <td class="match">New Zealand vs Belgium</td>
+            <td>Vancouver</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 27 June</td>
+            <td class="ko">10 PM</td>
+            <td class="match">Croatia vs Ghana</td>
+            <td>Philadelphia</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr class="england">
+            <td class="date">Saturday, 27 June</td>
+            <td class="ko">10 PM</td>
+            <td class="match">Panama vs England</td>
+            <td>New Jersey</td>
+            <td class="tv">ITV</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 28 June</td>
+            <td class="ko">12:30 AM</td>
+            <td class="match">Colombia vs Portugal</td>
+            <td>Miami</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 28 June</td>
+            <td class="ko">12:30 AM</td>
+            <td class="match">DR Congo vs Uzbekistan</td>
+            <td>Atlanta</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 28 June</td>
+            <td class="ko">3 AM</td>
+            <td class="match">Algeria vs Austria</td>
+            <td>Kansas City</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 28 June</td>
+            <td class="ko">3 AM</td>
+            <td class="match">Jordan vs Argentina</td>
+            <td>Arlington</td>
+            <td class="tv">BBC</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 28 June</td>
+            <td class="ko">8 PM</td>
+            <td class="match">R32 M73: A2 vs B2</td>
+            <td>Los Angeles</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Monday, 29 June</td>
+            <td class="ko">6 PM</td>
+            <td class="match">R32 M76: C1 vs F2</td>
+            <td>Houston</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Monday, 29 June</td>
+            <td class="ko">9:30 PM</td>
+            <td class="match">R32 M74: E1 vs 3rd A/B/C/D/F</td>
+            <td>Foxborough</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 30 June</td>
+            <td class="ko">2 AM</td>
+            <td class="match">R32 M75: F1 vs C2</td>
+            <td>Guadalupe</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 30 June</td>
+            <td class="ko">6 PM</td>
+            <td class="match">R32 M78: E2 vs I2</td>
+            <td>Arlington</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 30 June</td>
+            <td class="ko">10 PM</td>
+            <td class="match">R32 M77: I1 vs 3rd C/D/F/G/H</td>
+            <td>New Jersey</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 1 July</td>
+            <td class="ko">2 AM</td>
+            <td class="match">R32 M79: A1 vs 3rd C/E/F/H/I</td>
+            <td>Mexico City</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 1 July</td>
+            <td class="ko">5 PM</td>
+            <td class="match">R32 M80: L1 vs 3rd E/H/I/J/K</td>
+            <td>Atlanta</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 1 July</td>
+            <td class="ko">9 PM</td>
+            <td class="match">R32 M82: G1 vs 3rd A/E/H/I/J</td>
+            <td>Seattle</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Thursday, 2 July</td>
+            <td class="ko">1 AM</td>
+            <td class="match">R32 M81: D1 vs 3rd B/E/F/I/J</td>
+            <td>Santa Clara</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Thursday, 2 July</td>
+            <td class="ko">8 PM</td>
+            <td class="match">R32 M84: H1 vs J2</td>
+            <td>Los Angeles</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 3 July</td>
+            <td class="ko">12 AM</td>
+            <td class="match">R32 M83: K2 vs L2</td>
+            <td>Toronto</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 3 July</td>
+            <td class="ko">4 AM</td>
+            <td class="match">R32 M85: B1 vs 3rd E/F/G/I/J</td>
+            <td>Vancouver</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 3 July</td>
+            <td class="ko">7 PM</td>
+            <td class="match">R32 M88: D2 vs G2</td>
+            <td>Arlington</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 3 July</td>
+            <td class="ko">11 PM</td>
+            <td class="match">R32 M86: J1 vs H2</td>
+            <td>Miami</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 4 July</td>
+            <td class="ko">2:30 AM</td>
+            <td class="match">R32 M87: K1 vs 3rd D/E/I/J/L</td>
+            <td>Kansas City</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 4 July</td>
+            <td class="ko">6 PM</td>
+            <td class="match">R16 M90: M73 winner vs M75 winner</td>
+            <td>Houston</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 4 July</td>
+            <td class="ko">10 PM</td>
+            <td class="match">R16 M89: M74 winner vs M77 winner</td>
+            <td>Philadelphia</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 5 July</td>
+            <td class="ko">9 PM</td>
+            <td class="match">R16 M91: M76 winner vs M78 winner</td>
+            <td>New Jersey</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Monday, 6 July</td>
+            <td class="ko">1 AM</td>
+            <td class="match">R16 M92: M79 winner vs M80 winner</td>
+            <td>Mexico City</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Monday, 6 July</td>
+            <td class="ko">8 PM</td>
+            <td class="match">R16 M93: M83 winner vs M84 winner</td>
+            <td>Arlington</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 7 July</td>
+            <td class="ko">1 AM</td>
+            <td class="match">R16 M94: M81 winner vs M82 winner</td>
+            <td>Seattle</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 7 July</td>
+            <td class="ko">5 PM</td>
+            <td class="match">R16 M95: M86 winner vs M88 winner</td>
+            <td>Atlanta</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 7 July</td>
+            <td class="ko">9 PM</td>
+            <td class="match">R16 M96: M85 winner vs M87 winner</td>
+            <td>Vancouver</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Thursday, 9 July</td>
+            <td class="ko">9 PM</td>
+            <td class="match">QF M97: M89 winner vs M90 winner</td>
+            <td>Foxborough</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Friday, 10 July</td>
+            <td class="ko">8 PM</td>
+            <td class="match">QF M98: M93 winner vs M94 winner</td>
+            <td>Los Angeles</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 11 July</td>
+            <td class="ko">10 PM</td>
+            <td class="match">QF M99: M91 winner vs M92 winner</td>
+            <td>Miami</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 12 July</td>
+            <td class="ko">2 AM</td>
+            <td class="match">QF M100: M95 winner vs M96 winner</td>
+            <td>Kansas City</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Tuesday, 14 July</td>
+            <td class="ko">8 PM</td>
+            <td class="match">SF M101: M97 winner vs M98 winner</td>
+            <td>Arlington</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Wednesday, 15 July</td>
+            <td class="ko">8 PM</td>
+            <td class="match">SF M102: M99 winner vs M100 winner</td>
+            <td>Atlanta</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Saturday, 18 July</td>
+            <td class="ko">10 PM</td>
+            <td class="match">Third place: M101 loser vs M102 loser</td>
+            <td>Miami</td>
+            <td class="tv">TBC</td>
+          </tr>
+          <tr>
+            <td class="date">Sunday, 19 July</td>
+            <td class="ko">8 PM</td>
+            <td class="match">Final: M101 winner vs M102 winner</td>
+            <td>New Jersey</td>
+            <td class="tv">TBC</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>UK local time</footer>
+  </main>
+</body>
+</html>
