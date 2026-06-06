@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FIFA World Cup 2026 — UK Schedule</title>
+  <title>WC 26 Schedule</title>
   <style>
     :root {
       --paper: #e5ebe8;
@@ -143,8 +143,8 @@
       border-bottom: none;
     }
 
-    tbody tr:nth-child(even) {
-      background: rgba(215, 196, 168, 0.10);
+    tbody tr:nth-child(odd) {
+      background: rgba(201, 213, 206, 0.18);
     }
 
     tbody tr:hover {
@@ -200,6 +200,21 @@
       color: var(--muted);
       font-size: 12px;
       text-align: right;
+    }
+
+    @media screen {
+      tbody tr.is-near td {
+        border-top: 1px solid #b4c2b9;
+        border-bottom: 1px solid #b4c2b9;
+      }
+
+      tbody tr.is-near td:first-child {
+        border-left: 2px solid #a0b0a7;
+      }
+
+      tbody tr.is-near td:last-child {
+        border-right: 2px solid #a0b0a7;
+      }
     }
 
     @media (max-width: 760px) {
@@ -288,7 +303,7 @@
         padding: 7px 8px 6px;
       }
 
-      tbody tr:nth-child(even) {
+      tbody tr:nth-child(odd) {
         background: rgba(201, 213, 206, 0.20);
       }
 
@@ -1080,5 +1095,54 @@
 
     <footer>UK local time</footer>
   </main>
+  <script>
+    const now = new Date();
+    const MONTH_INDEX = {
+      June: 5,
+      July: 6
+    };
+
+    const parseKickoff = (dateText, timeText) => {
+      const [, dayText, monthText] = dateText.match(/,\s+(\d+)\s+(\w+)/) || [];
+      const [, hourText, minuteText = "0", meridiem] = timeText.match(/^(\d+)(?::(\d+))?\s+(AM|PM)$/) || [];
+
+      if (!dayText || !monthText || !hourText || !meridiem) {
+        return null;
+      }
+
+      let hour = Number(hourText);
+      if (meridiem === "AM" && hour === 12) hour = 0;
+      if (meridiem === "PM" && hour !== 12) hour += 12;
+
+      return new Date(2026, MONTH_INDEX[monthText], Number(dayText), hour, Number(minuteText));
+    };
+
+    const windowStart = now.getTime() - 2 * 60 * 60 * 1000;
+    const windowEnd = now.getTime() + 24 * 60 * 60 * 1000;
+
+    let firstNearMatch = null;
+
+    document.querySelectorAll("tbody tr").forEach((row) => {
+      const kickoff = parseKickoff(
+        row.querySelector(".date")?.textContent.trim(),
+        row.querySelector(".ko")?.textContent.trim()
+      );
+
+      if (!kickoff) return;
+
+      const kickoffTime = kickoff.getTime();
+      if (kickoffTime >= windowStart && kickoffTime <= windowEnd) {
+        row.classList.add("is-near");
+        firstNearMatch ||= row;
+      }
+    });
+
+    if (firstNearMatch && window.matchMedia("screen").matches) {
+      firstNearMatch.scrollIntoView({
+        block: "center",
+        behavior: "auto"
+      });
+    }
+  </script>
 </body>
 </html>
