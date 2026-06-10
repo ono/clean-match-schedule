@@ -284,6 +284,7 @@
       tbody tr.is-near {
         border: 1px solid #a0b0a7;
         border-left-width: 3px;
+        border-right-width: 3px;
       }
 
       tbody tr.is-near + tr {
@@ -292,6 +293,12 @@
 
       tbody tr.is-near td {
         border: none;
+      }
+
+      tbody tr.is-near td:first-child,
+      tbody tr.is-near td:last-child {
+        border-left: none;
+        border-right: none;
       }
 
       tbody td {
